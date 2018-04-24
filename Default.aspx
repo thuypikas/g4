@@ -34,7 +34,7 @@
         <article style="width:960px;">
         <h2 style="width:960px;">&nbsp;&nbsp;Apple</h2>
            
-                        <asp:FormView ID="FormView1" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource2">
+                        <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="Id" DataSourceID="SqlDataSource2">
                             <EditItemTemplate>
                                 Id:
                                 <asp:Label ID="IdLabel1" runat="server" Text='<%# Eval("Id") %>' />
