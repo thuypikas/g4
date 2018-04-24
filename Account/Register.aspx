@@ -5,7 +5,7 @@
         <h1><%: Title %>.</h1>
         <h2>Use the form below to create a new account.</h2>
     </hgroup>
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server">
+    <asp:CreateUserWizard ID="RegisterUser" runat="server">
         <WizardSteps>
             <asp:CreateUserWizardStep runat="server" />
             <asp:CompleteWizardStep runat="server" />
