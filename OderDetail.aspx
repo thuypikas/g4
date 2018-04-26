@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="OderDetail.aspx.cs" Inherits="Contact" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="Id" DataSourceID="SqlDataSource2">
+    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="Id" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" GridLines="Both">
         <EditItemTemplate>
             Id:
             <asp:Label ID="IdLabel1" runat="server" Text='<%# Eval("Id") %>' />
@@ -21,6 +21,9 @@
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
+        <EditRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+        <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
         <InsertItemTemplate>
             OrderId:
             <asp:TextBox ID="OrderIdTextBox" runat="server" Text='<%# Bind("OrderId") %>' />
@@ -57,6 +60,8 @@
             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
             &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
         </ItemTemplate>
+        <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+        <RowStyle BackColor="White" ForeColor="#330099" />
     </asp:FormView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Nhom1.mdf;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [OrderDetails] WHERE [Id] = @Id" InsertCommand="INSERT INTO [OrderDetails] ([OrderId], [ProductId], [UnitPrice], [Quantity]) VALUES (@OrderId, @ProductId, @UnitPrice, @Quantity)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Id], [OrderId], [ProductId], [UnitPrice], [Quantity] FROM [OrderDetails]" UpdateCommand="UPDATE [OrderDetails] SET [OrderId] = @OrderId, [ProductId] = @ProductId, [UnitPrice] = @UnitPrice, [Quantity] = @Quantity WHERE [Id] = @Id">
         <DeleteParameters>
