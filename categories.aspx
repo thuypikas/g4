@@ -5,7 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
+    <h1 style="color:red"> danh muc san pham</h1>
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+        
     <EditItemTemplate>
         Id:
         <asp:Label ID="IdLabel1" runat="server" Text='<%# Eval("Id") %>' />
