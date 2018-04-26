@@ -7,7 +7,7 @@
     </hgroup>
     
     <section id="loginForm">
-        <h2>Use a local account to log in.</h2>
+        <h2 class="auto-style1">Use a local account to log in.</h2>
         <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">
             <LayoutTemplate>
                 <p class="validation-summary-errors">
@@ -45,4 +45,11 @@
         <h2>Use another service to log in.</h2>
         <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
     </section>
+</asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="HeadContent">
+    <style type="text/css">
+        .auto-style1 {
+            color: #FF0000;
+        }
+    </style>
 </asp:Content>
